@@ -1975,6 +1975,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   data: function data() {
@@ -2162,6 +2167,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_infinite_slide_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-infinite-slide-bar */ "./node_modules/vue-infinite-slide-bar/lib/vue-infinite-slide-bar.min.js");
 /* harmony import */ var vue_infinite_slide_bar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_infinite_slide_bar__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
 //
 //
 //
@@ -2551,7 +2559,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.customBackground[data-v-1d716208] {\r\n    background-image: url(https://gargximran.github.io/port/assets/images/bg.jpg);\r\n    background-size: cover;\r\n    background-position: center;\n}\n.heading[data-v-1d716208] {\r\n    color: #fff;\r\n    font-size: 9em;\r\n    font-weight: normal;\r\n    font-family: \"Roboto\", sans-serif;\n}\n@media only screen and (max-width: 450px) {\n.heading[data-v-1d716208] {\r\n        font-size: 5em;\n}\n}\n.button[data-v-1d716208] {\r\n    left: 50%;\r\n    transform: translateX(-50%);\n}\r\n", ""]);
+exports.push([module.i, "\n.customBackground[data-v-1d716208] {\r\n    background-image: url(https://github.com/gargximran/portfolio/blob/master/public/asset/images/bg.jpg?raw=true);\r\n    background-size: cover;\r\n    background-position: center;\n}\n.heading[data-v-1d716208] {\r\n    color: #fff;\r\n    font-size: 9em;\r\n    font-weight: normal;\r\n    font-family: \"Roboto\", sans-serif;\n}\n@media only screen and (max-width: 450px) {\n.heading[data-v-1d716208] {\r\n        font-size: 5em;\n}\n}\n.button[data-v-1d716208] {\r\n    left: 50%;\r\n    transform: translateX(-50%);\n}\r\n", ""]);
 
 // exports
 
@@ -3805,7 +3813,11 @@ var render = function() {
             [
               _c("v-avatar", { staticClass: "mr-3" }, [
                 _c("img", {
-                  attrs: { src: "asset/images/logo.jpg", alt: "GXI" }
+                  attrs: {
+                    src:
+                      "https://github.com/gargximran/portfolio/blob/master/public/asset/images/logo.JPG?raw=true",
+                    alt: "GXI"
+                  }
                 })
               ]),
               _vm._v(" "),
@@ -3863,7 +3875,14 @@ var render = function() {
                   _c(
                     "v-col",
                     { attrs: { cols: "12" } },
-                    [_c("v-img", { attrs: { src: "asset/images/logo.jpg" } })],
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src:
+                            "https://github.com/gargximran/portfolio/blob/master/public/asset/images/logo.JPG"
+                        }
+                      })
+                    ],
                     1
                   )
                 ],
@@ -4237,12 +4256,17 @@ var render = function() {
                       attrs: {
                         dark: "",
                         "max-width": "700",
-                        src: "asset/images/review/1.jpg"
+                        src:
+                          "https://github.com/gargximran/portfolio/blob/master/public/asset/images/review/1.JPG?raw=true"
                       }
                     }),
                     _vm._v(" "),
                     _c("v-img", {
-                      attrs: { dark: "", src: "asset/images/review/2.jpg" }
+                      attrs: {
+                        dark: "",
+                        src:
+                          "https://github.com/gargximran/portfolio/blob/master/public/asset/images/review/2.JPG?raw=true"
+                      }
                     })
                   ],
                   1
