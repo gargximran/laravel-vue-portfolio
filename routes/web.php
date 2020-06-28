@@ -31,7 +31,7 @@ Route::get('/', function () {
     return view('Home');
 });
 
-Route::get('/{route}', function () {
+Route::get('/{route?}', function () {
     return view('Home');
-})->where('route', ".*");
+})->where('route', '[\/\w\.-]*');
 
