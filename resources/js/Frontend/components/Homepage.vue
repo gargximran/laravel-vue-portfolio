@@ -31,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .customBackground {
-    background-image: url("asset/images/bg.jpg");
+    background-image: url("/asset/images/bg.jpg");
     background-size: cover;
     background-position: center;
 }
