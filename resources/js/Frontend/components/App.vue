@@ -2,7 +2,7 @@
     <v-app id="inspire">
         <v-app-bar app color="teal" dark v-if="$route.name != 'home'">
             <v-avatar class="mr-3">
-                <img src="images/logo.JPG" alt="GXI" />
+                <img src="asset/images/logo.JPG" alt="GXI" />
             </v-avatar>
             <v-toolbar-title>GargX Imran</v-toolbar-title>
 
