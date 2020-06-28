@@ -2,7 +2,10 @@
     <v-app id="inspire">
         <v-app-bar app color="teal" dark v-if="$route.name != 'home'">
             <v-avatar class="mr-3">
-                <img src="asset/images/logo.jpg" alt="GXI" />
+                <img
+                    src="https://github.com/gargximran/portfolio/blob/master/public/asset/images/logo.JPG?raw=true"
+                    alt="GXI"
+                />
             </v-avatar>
             <v-toolbar-title>GargX Imran</v-toolbar-title>
 
@@ -31,7 +34,9 @@
         >
             <v-row no-gutters>
                 <v-col cols="12">
-                    <v-img src="asset/images/logo.jpg"></v-img>
+                    <v-img
+                        src="https://github.com/gargximran/portfolio/blob/master/public/asset/images/logo.JPG"
+                    ></v-img>
                 </v-col>
             </v-row>
             <v-list nav dense>

@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/customization', function () {
-    return view('admin');
-});
+// Route::get('/customization', function () {
+//     return view('admin');
+// });
 
-Route::get('/customization/{route}', function () {
-    return view('admin');
-})->where('route', ".*");
+// Route::get('/customization/{route}', function () {
+//     return view('admin');
+// })->where('route', ".*");
 
 
 

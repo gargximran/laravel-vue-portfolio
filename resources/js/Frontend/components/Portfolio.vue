@@ -11,10 +11,13 @@
                         <v-img
                             dark
                             max-width="700"
-                            src="asset/images/review/1.jpg"
+                            src="https://github.com/gargximran/portfolio/blob/master/public/asset/images/review/1.JPG?raw=true"
                         ></v-img>
 
-                        <v-img dark src="asset/images/review/2.jpg"></v-img>
+                        <v-img
+                            dark
+                            src="https://github.com/gargximran/portfolio/blob/master/public/asset/images/review/2.JPG?raw=true"
+                        ></v-img>
                     </div>
                 </InfiniteSlideBar>
             </v-col>
