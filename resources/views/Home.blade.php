@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imran Hossain</title>
     <link rel="stylesheet" href="{{asset('asset/css/app.css', true)}}">
+    <base href="{{url('/')}}">
     
     </head>
 <body>
