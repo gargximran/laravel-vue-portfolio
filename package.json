@@ -26,6 +26,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.13.1",
         "admin-lte": "^3.0.0-alpha.2",
+        "vue-fb-customer-chat": "^0.2.0",
         "vue-infinite-slide-bar": "^1.1.1",
         "vue-router": "^3.3.4",
         "vuetify": "^2.3.2",
