@@ -37,7 +37,7 @@
                 </v-btn>
             </v-col>
         </v-row>
-
+        <v-row>
         <transition-group class="projects" name="projects">
             <v-col
                 cols="6"
@@ -68,6 +68,7 @@
                 </v-card>
             </v-col>
         </transition-group>
+        </v-row>
         <v-divider></v-divider>
     </div>
 </template>
