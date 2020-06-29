@@ -14,6 +14,7 @@
                 class="button"
                 to="/services"
                 absolute
+                router
                 dark
                 fab
                 bottom

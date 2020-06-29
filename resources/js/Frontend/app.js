@@ -14,3 +14,5 @@ new Vue({
     vuetify,
     render: h => h(App)
 });
+
+require("./fb.js");

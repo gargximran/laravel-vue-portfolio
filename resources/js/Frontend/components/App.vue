@@ -11,6 +11,7 @@
                 v-for="(navBtn, navIndex) in navigationBtn"
                 :key="navIndex"
                 text
+                router
                 active-class="pink"
                 :to="navBtn.route"
                 class="mr-2 d-none d-md-flex"
