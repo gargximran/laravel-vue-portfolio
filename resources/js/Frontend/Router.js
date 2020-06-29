@@ -1,39 +1,49 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+import Homepage from "./components/Homepage";
+
+const Portfolio = () => {
+    return import(/* webpackChunkName: "Portfolio" */ "./components/Portfolio");
+};
+const Service = () => {
+    return import(/* webpackChunkName: "Service" */ "./components/Service");
+};
+
+const Skills = () => {
+    return import(/* webpackChunkName: "Skills" */ "./components/Skills");
+};
+
+const Contact = () => {
+    return import(/* webpackChunkName: "Contact" */ "./components/Contact");
+};
+
 Vue.use(VueRouter);
 
 const routes = [
     {
         path: "/",
-        component: () =>
-            import(/* webpackChunkName: "Homepage" */ "./components/Homepage"),
+        component: Homepage,
         name: "home"
     },
     {
         path: "/portfolio",
-        component: () =>
-            import(
-                /* webpackChunkName: "Portfolio" */ "./components/Portfolio"
-            ),
+        component: Portfolio,
         name: "portfolio"
     },
     {
         path: "/services",
-        component: () =>
-            import(/* webpackChunkName: "Service" */ "./components/Service"),
+        component: Service,
         name: "service"
     },
     {
         path: "/skills",
-        component: () =>
-            import(/* webpackChunkName: "Skills" */ "./components/Skills"),
+        component: Skills,
         name: "skill"
     },
     {
         path: "/contact",
-        component: () =>
-            import(/* webpackChunkName: "Contact" */ "./components/Contact"),
+        component: Contact,
         name: "contact"
     }
 ];
