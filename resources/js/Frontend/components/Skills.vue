@@ -22,24 +22,23 @@
                 md="3"
                 v-for="(skill, key) in skills"
                 :key="key"
-                class="mt-5"
+                class="m-5"
             >
-                <div class="text-center">
-                    <v-progress-circular
-                        size="150"
-                        class="mb-1"
-                        :value="skill.value"
-                        width="6"
-                        :color="skill.color"
-                        >{{ skill.value }}%</v-progress-circular
-                    >
+                <v-card class="p-4">
+                    <div class="text-center">
+                        <v-progress-circular
+                            size="150"
+                            class="mb-1"
+                            :value="skill.value"
+                            width="6"
+                            :color="skill.color"
+                            >{{ skill.value }}%</v-progress-circular
+                        >
 
-                    <p class="text-body-2 p-2">{{ skill.desc }}</p>
-
-                    <h2 class="text-h6">{{ skill.name }}</h2>
-
-                    <v-divider></v-divider>
-                </div>
+                        <h2 class="text-h6">{{ skill.name }}</h2>
+                        <p class="text-body-2 py-2">{{ skill.desc }}</p>
+                    </div>
+                </v-card>
             </v-col>
         </v-row>
     </v-container>

@@ -59,7 +59,20 @@
                 <router-view></router-view>
             </transition>
         </v-main>
-        <v-footer app color="teal" dark>
+
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+
+        <!-- Your Chat Plugin code -->
+        <div
+            class="fb-customerchat"
+            attribution="setup_tool"
+            page_id="101533644958334"
+            theme_color="#ff5ca1"
+            logged_in_greeting="Hey! How can I help you?"
+            logged_out_greeting="Hey! How can I help you?"
+        ></div>
+        <v-footer app color="teal" dark v-if="$route.name != 'home'">
             <div class="subtitle-2">@2020</div>
         </v-footer>
     </v-app>

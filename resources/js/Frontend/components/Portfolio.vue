@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-container fluid>
         <h2 class="pink--text text-center mt-3 text-subtitle-2">
             What they are saying about me?
         </h2>
@@ -37,40 +37,39 @@
                 </v-btn>
             </v-col>
         </v-row>
-        <v-container fluid>
-            <transition-group class="projects" name="projects">
-                <v-col
-                    cols="6"
-                    sm="4"
-                    lg="2"
-                    md="2"
-                    class="project"
-                    v-for="project in projects"
-                    v-if="
-                        currentFilter === project.category ||
-                            currentFilter === 'ALL'
-                    "
-                    :key="project.title"
-                >
-                    <v-card href="">
-                        <v-img
-                            class="white--text align-end"
-                            height="200px"
-                            :src="project.image"
-                        >
-                            <v-card-title>{{ project.title }}</v-card-title>
-                        </v-img>
 
-                        <v-card-subtitle class="pb-0">{{
-                            project.category
-                        }}</v-card-subtitle>
-                    </v-card>
-                </v-col>
-            </transition-group>
-        </v-container>
+        <transition-group class="projects" name="projects">
+            <v-col
+                cols="6"
+                sm="4"
+                lg="2"
+                md="2"
+                class="project"
+                v-for="project in projects"
+                v-if="
+                    currentFilter === project.category ||
+                        currentFilter === 'ALL'
+                "
+                :key="project.title"
+            >
+                <v-card href="">
+                    <v-img
+                        class="white--text align-end"
+                        height="200px"
+                        :src="project.image"
+                    >
+                        <v-card-title>{{ project.title }}</v-card-title>
+                    </v-img>
+
+                    <v-card-subtitle class="pb-0">{{
+                        project.category
+                    }}</v-card-subtitle>
+                </v-card>
+            </v-col>
+        </transition-group>
 
         <v-divider></v-divider>
-    </div>
+    </v-container>
 </template>
 <script>
 import InfiniteSlideBar from "vue-infinite-slide-bar";

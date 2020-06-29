@@ -1,24 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Homepage from "./components/Homepage";
-
-const Portfolio = () => {
-    return import(/* webpackChunkName: "Portfolio" */ "./components/Portfolio");
-};
-const Service = () => {
-    return import(/* webpackChunkName: "Service" */ "./components/Service");
-};
-
-const Skills = () => {
-    return import(/* webpackChunkName: "Skills" */ "./components/Skills");
-};
-
-const Contact = () => {
-    return import(/* webpackChunkName: "Contact" */ "./components/Contact");
-};
-
 Vue.use(VueRouter);
+
+import Homepage from "./components/Homepage";
+import Portfolio from "./components/Portfolio";
+import Service from "./components/Service";
+import Skill from "./components/Skills";
+import Contact from "./components/Contact";
 
 const routes = [
     {
@@ -38,7 +27,7 @@ const routes = [
     },
     {
         path: "/skills",
-        component: Skills,
+        component: Skill,
         name: "skill"
     },
     {
