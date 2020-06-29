@@ -42,6 +42,7 @@
                         v-for="(navSide, navsideIndex) in navigationBtn"
                         :key="navsideIndex"
                         :to="navSide.route"
+                        router
                     >
                         <v-list-item-icon>
                             <v-icon>{{ navSide.icon }}</v-icon>

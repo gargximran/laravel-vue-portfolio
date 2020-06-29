@@ -6,6 +6,7 @@
                 <v-btn
                     color="float-right blue--text text-capitalize"
                     to="/skills"
+                    router
                     ><span>Go to Skills </span>
                     <v-icon>mdi-directions</v-icon></v-btn
                 >
