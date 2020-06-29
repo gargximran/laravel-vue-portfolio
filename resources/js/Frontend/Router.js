@@ -3,36 +3,37 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import Homepage from "./components/Homepage";
-import Portfolio from "./components/Portfolio";
-import Service from "./components/Service";
-import Skill from "./components/Skills";
-import Contact from "./components/Contact";
-
 const routes = [
     {
         path: "/",
-        component: Homepage,
+        component: () =>
+            import(/* webpackChunkName: "Homepage" */ "./components/Homepage"),
         name: "home"
     },
     {
         path: "/portfolio",
-        component: Portfolio,
+        component: () =>
+            import(
+                /* webpackChunkName: "Portfolio" */ "./components/Portfolio"
+            ),
         name: "portfolio"
     },
     {
         path: "/services",
-        component: Service,
+        component: () =>
+            import(/* webpackChunkName: "Service" */ "./components/Service"),
         name: "service"
     },
     {
         path: "/skills",
-        component: Skill,
+        component: () =>
+            import(/* webpackChunkName: "Skills" */ "./components/Skills"),
         name: "skill"
     },
     {
         path: "/contact",
-        component: Contact,
+        component: () =>
+            import(/* webpackChunkName: "Contact" */ "./components/Contact"),
         name: "contact"
     }
 ];

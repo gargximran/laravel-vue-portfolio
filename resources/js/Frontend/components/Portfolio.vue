@@ -37,38 +37,38 @@
                 </v-btn>
             </v-col>
         </v-row>
-        <v-row>
-        <transition-group class="projects" name="projects">
-            <v-col
-                cols="6"
-                sm="4"
-                lg="2"
-                md="2"
-                xs="6"
-                class="project"
-                v-for="project in projects"
-                v-if="
-                    currentFilter === project.category ||
-                        currentFilter === 'ALL'
-                "
-                :key="project.title"
-            >
-                <v-card href="">
-                    <v-img
-                        class="white--text align-end"
-                        height="200px"
-                        :src="project.image"
-                    >
-                        <v-card-title>{{ project.title }}</v-card-title>
-                    </v-img>
+        <v-container fluid>
+            <transition-group class="projects" name="projects">
+                <v-col
+                    cols="6"
+                    sm="4"
+                    lg="2"
+                    md="2"
+                    class="project"
+                    v-for="project in projects"
+                    v-if="
+                        currentFilter === project.category ||
+                            currentFilter === 'ALL'
+                    "
+                    :key="project.title"
+                >
+                    <v-card href="">
+                        <v-img
+                            class="white--text align-end"
+                            height="200px"
+                            :src="project.image"
+                        >
+                            <v-card-title>{{ project.title }}</v-card-title>
+                        </v-img>
 
-                    <v-card-subtitle class="pb-0">{{
-                        project.category
-                    }}</v-card-subtitle>
-                </v-card>
-            </v-col>
-        </transition-group>
-        </v-row>
+                        <v-card-subtitle class="pb-0">{{
+                            project.category
+                        }}</v-card-subtitle>
+                    </v-card>
+                </v-col>
+            </transition-group>
+        </v-container>
+
         <v-divider></v-divider>
     </div>
 </template>
