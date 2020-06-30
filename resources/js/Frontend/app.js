@@ -4,6 +4,10 @@ import store from "./Store";
 import vuetify from "./Vuetify";
 import VueFbCustomerChat from "vue-fb-customer-chat";
 
+import PerfectScrollbar from "vue2-perfect-scrollbar";
+
+Vue.use(PerfectScrollbar);
+
 Vue.use(VueFbCustomerChat, {
     page_id: 101533644958334,
     theme_color: "#e91e63",

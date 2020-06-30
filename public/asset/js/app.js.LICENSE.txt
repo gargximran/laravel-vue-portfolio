@@ -1,4 +1,10 @@
 /*!
+   * perfect-scrollbar v1.5.0
+   * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
+   * Licensed under MIT
+   */
+
+/*!
   * vue-router v3.3.4
   * (c) 2020 Evan You
   * @license MIT

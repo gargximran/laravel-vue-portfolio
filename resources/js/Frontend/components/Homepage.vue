@@ -17,10 +17,10 @@
                 router
                 dark
                 fab
-                bottom
+                top
                 color="pink"
             >
-                <v-icon>mdi-arrow-down</v-icon>
+                <v-icon>mdi-arrow-right</v-icon>
             </v-btn>
         </v-card-text>
     </v-container>

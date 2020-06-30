@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="customBackground">
         <h2 class="pink--text text-center mt-3 text-subtitle-2">
             What they are saying about me?
         </h2>
@@ -24,16 +24,17 @@
 
         <v-row>
             <v-col cols="12" align="center">
-                <v-btn v-on:click="setFilter('ALL')">
-                    <span>ALL</span>
+                <v-btn class="ma-1" small v-on:click="setFilter('ALL')">
+                    ALL
                 </v-btn>
                 <v-btn
+                    small
                     v-for="(category, categoryIndex) in projectsCategory"
                     :key="categoryIndex"
                     @click="setFilter(category)"
-                    class="mr-1"
+                    class="ma-1"
                 >
-                    <span>{{ category }}</span>
+                    {{ category }}
                 </v-btn>
             </v-col>
         </v-row>
@@ -164,5 +165,13 @@ export default {
 .project {
     transition: all 0.35s ease-in-out;
     border-radius: 3px;
+}
+
+.customBackground {
+    background-image: url("/asset/images/wave.svg");
+
+    background-size: contain;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 </style>

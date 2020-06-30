@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid dark>
+    <v-container fluid dark class="customBackground">
         <h2 class="pink--text text-center mt-3">Services</h2>
         <v-row>
             <v-col cols="12">
@@ -14,6 +14,7 @@
         </v-row>
 
         <v-divider></v-divider>
+
         <v-timeline>
             <v-timeline-item
                 v-for="(item, xx) in treeview"
@@ -33,6 +34,7 @@
                 </v-card>
             </v-timeline-item>
         </v-timeline>
+
         <v-divider></v-divider>
     </v-container>
 </template>
@@ -77,4 +79,12 @@ export default {
     })
 };
 </script>
-<style scoped></style>
+<style scoped>
+.customBackground {
+    background-image: url("/asset/images/wave.svg");
+
+    background-size: contain;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+</style>
