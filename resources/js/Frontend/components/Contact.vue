@@ -155,6 +155,7 @@
                             required
                             :rules="nameRules"
                             prepend-icon="mdi-account-outline"
+                            v-model="contact.name"
                         ></v-text-field>
 
                         <v-text-field
@@ -165,6 +166,7 @@
                             required
                             :rules="emailRules"
                             prepend-icon="mdi-email-outline"
+                            v-model="contact.email"
                         ></v-text-field>
 
                         <v-textarea
@@ -172,6 +174,7 @@
                             :rules="textRules"
                             label="Say something..."
                             prepend-icon="mdi-card-text-outline"
+                            v-model="contact.message"
                             color="pink"
                         ></v-textarea>
                         <v-row no-gutters>
@@ -200,11 +203,19 @@ export default {
     name: "Contact",
 
     data: () => ({
+        contact: {
+            name: null,
+            email: null,
+            message: null
+        },
         loading: false,
         nameRules: [v => !!v || "Name is required"],
         emailRules: [
             v => !!v || "E-mail is required",
-            v => /.+@.+/.test(v) || "E-mail must be valid"
+            v =>
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+                    v
+                ) || "E-mail must be valid"
         ],
         textRules: [v => !!v || "Leave a message for me."]
     }),
@@ -214,6 +225,9 @@ export default {
                 this.loading = true;
                 setTimeout(() => {
                     this.loading = false;
+                    this.contact.name = null;
+                    this.contact.email = null;
+                    this.contact.message = null;
                     Toast.fire({
                         icon: "success",
                         title: "Message Sent Successfully!",
@@ -221,6 +235,8 @@ export default {
                             title: "text-subtitle-2"
                         }
                     });
+
+                    this.$refs.contact.reset();
                 }, 3000);
             }
         }
