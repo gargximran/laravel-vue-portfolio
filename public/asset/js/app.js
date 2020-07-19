@@ -2779,7 +2779,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.typed-element[data-v-1d716208] {\r\n    display: block;\n}\n.customBackground[data-v-1d716208] {\r\n    background-image: url(\"/asset/images/bg.jpg\");\r\n    background-size: cover;\r\n    background-position: center;\n}\n.heading[data-v-1d716208] {\r\n    color: #fff;\r\n    font-size: 9em;\r\n    font-weight: normal;\r\n    font-family: \"Roboto\", sans-serif;\n}\n@media only screen and (max-width: 450px) {\n.heading[data-v-1d716208] {\r\n        font-size: 5em;\n}\n}\n.button[data-v-1d716208] {\r\n    left: 50%;\r\n    transform: translateX(-50%);\n}\r\n", ""]);
+exports.push([module.i, "\n.typed-element[data-v-1d716208] {\r\n    display: block;\n}\n.customBackground[data-v-1d716208] {\r\n    background-image: url(\"/asset/images/bg.jpg\");\r\n    background-size: cover;\r\n    background-position: center;\n}\n.heading[data-v-1d716208] {\r\n    color: #fff;\r\n    font-size: 9em;\r\n    font-weight: normal;\r\n    font-family: \"Roboto\", sans-serif;\n}\n@media only screen and (max-width: 450px) {\n.heading[data-v-1d716208] {\r\n        font-size: 5em;\n}\n}\n.nn[data-v-1d716208] {\r\n    -webkit-animation: nnn-data-v-1d716208 2s infinite;\r\n            animation: nnn-data-v-1d716208 2s infinite;\n}\n@-webkit-keyframes nnn-data-v-1d716208 {\n0% {\r\n        transform: scale(1);\n}\n50% {\r\n        transform: scale(1.3);\n}\n100% {\r\n        transform: scale(1);\n}\n}\n@keyframes nnn-data-v-1d716208 {\n0% {\r\n        transform: scale(1);\n}\n50% {\r\n        transform: scale(1.3);\n}\n100% {\r\n        transform: scale(1);\n}\n}\n.button[data-v-1d716208] {\r\n    left: 50%;\r\n    transform: translateX(-50%);\n}\r\n", ""]);
 
 // exports
 
@@ -7336,9 +7336,7 @@ var render = function() {
                 { attrs: { app: "", color: "teal", dark: "" } },
                 [
                   _c("v-avatar", { staticClass: "mr-3" }, [
-                    _c("img", {
-                      attrs: { src: "asset/images/logo.JPG", alt: "GXI" }
-                    })
+                    _c("img", { attrs: { src: "gXi/gxi.png", alt: "GXI" } })
                   ]),
                   _vm._v(" "),
                   _c("v-toolbar-title", [_vm._v("GargX Imran")]),
@@ -7996,7 +7994,7 @@ var render = function() {
           _c(
             "v-btn",
             {
-              staticClass: "button",
+              staticClass: "button nn",
               attrs: {
                 to: "/services",
                 absolute: "",
