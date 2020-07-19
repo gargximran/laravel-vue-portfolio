@@ -2436,6 +2436,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Portfolio",
@@ -2447,7 +2452,7 @@ __webpack_require__.r(__webpack_exports__);
       currentFilter: "ALL",
       projects: [{
         title: "E-Business",
-        image: "asset/images/mock/1.JPG",
+        image: "asset/images/mock/1.jpg",
         category: "Laravel"
       }, {
         title: "Homecure",
@@ -8052,6 +8057,7 @@ var render = function() {
                       attrs: {
                         dark: "",
                         "max-width": "700",
+                        "lazy-src": "",
                         src: "asset/images/review/1.JPG"
                       }
                     }),
@@ -8146,7 +8152,10 @@ var render = function() {
                         "v-img",
                         {
                           staticClass: "white--text align-end",
-                          attrs: { src: project.image }
+                          attrs: {
+                            "lazy-src": "asset/images/mock/loading.gif",
+                            src: project.image
+                          }
                         },
                         [_c("v-card-title", [_vm._v(_vm._s(project.title))])],
                         1
