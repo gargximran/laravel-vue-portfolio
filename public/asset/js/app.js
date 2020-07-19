@@ -2335,6 +2335,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_typed_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -7950,7 +7953,8 @@ var render = function() {
                     backSpeed: 40,
                     backDelay: 700,
                     cursorChar: "_",
-                    shuffle: true
+                    shuffle: true,
+                    startDelay: 700
                   },
                   on: {
                     onComplete: function($event) {
@@ -7971,7 +7975,9 @@ var render = function() {
                     [
                       _c("span", { staticClass: "play" }, [_vm._v("I am a ")]),
                       _vm._v(" "),
-                      _c("span", { staticClass: "play pink--text typing" })
+                      _c("span", { staticClass: "play pink--text typing" }, [
+                        _vm._v("web developer")
+                      ])
                     ]
                   )
                 ]
