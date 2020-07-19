@@ -2225,6 +2225,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Contact",
   data: function data() {
@@ -7701,6 +7704,7 @@ var render = function() {
                                   outlined: "",
                                   light: "",
                                   text: "",
+                                  small: "",
                                   target: "_blank",
                                   href: "https://www.fiverr.com/gargximran_1"
                                 }
@@ -7715,9 +7719,10 @@ var render = function() {
                             _c(
                               "v-btn",
                               {
-                                staticClass: "green--text",
+                                staticClass: "green",
                                 attrs: {
                                   outlined: "",
+                                  small: "",
                                   target: "_blank",
                                   href:
                                     "https://www.upwork.com/o/profiles/users/~01b6d3fae516401e8b/",
@@ -7734,9 +7739,10 @@ var render = function() {
                             _c(
                               "v-btn",
                               {
-                                staticClass: "orange--text",
+                                staticClass: "orange",
                                 attrs: {
                                   outlined: "",
+                                  small: "",
                                   target: "_blank",
                                   href:
                                     "https://www.freelancer.com/u/gargximran"
