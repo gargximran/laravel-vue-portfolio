@@ -2,10 +2,30 @@
     <v-container fluid dark class="fill-height customBackground">
         <v-row align="center">
             <v-col cols="12">
-                <h1 class="heading text-center text-xs-h2">IMRAN</h1>
-                <p class="text-md-h2 text-xs-h5 white--text text-center">
-                    Backend & Frontend Dev Maybe!
-                </p>
+                <h1 class="heading text-center text-xs-h2 play">IMRAN</h1>
+
+                <vue-typed-js
+                    :strings="[
+                        'frontend developer',
+                        'backend developer',
+                        'freelancer',
+                        'programmer',
+                        'web developer',
+                        'full stack developer'
+                    ]"
+                    :typeSpeed="50"
+                    :backSpeed="40"
+                    :backDelay="700"
+                    :cursorChar="'_'"
+                    :shuffle="true"
+                    @onComplete="goToNext()"
+                    @onTypingPaused="goToNext()"
+                >
+                    <p class="text-md-h2 text-xs-h5 white--text text-center">
+                        <span class="play">I am a </span>
+                        <span class="play pink--text typing"></span>
+                    </p>
+                </vue-typed-js>
             </v-col>
         </v-row>
 
@@ -26,11 +46,26 @@
     </v-container>
 </template>
 <script>
+import Vue from "vue";
+import VueTypedJs from "vue-typed-js";
+
+Vue.use(VueTypedJs);
+
 export default {
-    name: "Homepage"
+    name: "Homepage",
+    methods: {
+        goToNext() {
+            setTimeout(() => {
+                this.$router.push({ name: "service" });
+            }, 2000);
+        }
+    }
 };
 </script>
 <style scoped>
+.typed-element {
+    display: block;
+}
 .customBackground {
     background-image: url("/asset/images/bg.jpg");
     background-size: cover;

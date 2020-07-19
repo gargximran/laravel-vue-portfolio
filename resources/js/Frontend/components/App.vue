@@ -111,6 +111,9 @@ export default {
 </script>
 
 <style>
+.play {
+    font-family: "Playfair Display", serif !important;
+}
 .page-enter-active,
 .page-leave-active {
     transition: opacity 0.3s;

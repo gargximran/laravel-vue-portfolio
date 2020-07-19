@@ -42,9 +42,9 @@
         <transition-group class="projects" name="projects">
             <v-col
                 cols="6"
-                sm="4"
-                lg="2"
-                md="2"
+                sm="6"
+                lg="3"
+                md="4"
                 class="project"
                 v-for="project in projects"
                 v-if="
@@ -54,11 +54,7 @@
                 :key="project.title"
             >
                 <v-card href="">
-                    <v-img
-                        class="white--text align-end"
-                        height="200px"
-                        :src="project.image"
-                    >
+                    <v-img class="white--text align-end" :src="project.image">
                         <v-card-title>{{ project.title }}</v-card-title>
                     </v-img>
 
@@ -83,39 +79,30 @@ export default {
         currentFilter: "ALL",
         projects: [
             {
-                title: "Artwork",
-                image: "https://picsum.photos/g/200?image=122",
-                category: "ART"
+                title: "E-Business",
+                image: "asset/images/mock/1.JPG",
+                category: "Laravel"
             },
             {
-                title: "Charcoal",
-                image: "https://picsum.photos/g/200?image=116",
-                category: "ART"
+                title: "Homecure",
+                image: "asset/images/mock/2.png",
+                category: "Vue Js"
+            },
+            
+            {
+                title: "mdProt",
+                image: "asset/images/mock/3.jpg",
+                category: "Vue Js"
             },
             {
-                title: "Sketching",
-                image: "https://picsum.photos/g/200?image=121",
-                category: "DOODLES"
+                title: "Ui King",
+                image: "asset/images/mock/4.jpg",
+                category: "Vue Js"
             },
             {
-                title: "Acrillic",
-                image: "https://picsum.photos/g/200?image=133",
-                category: "WORKSHOPS"
-            },
-            {
-                title: "Pencil",
-                image: "https://picsum.photos/g/200?image=134",
-                category: "DOODLES"
-            },
-            {
-                title: "Pen",
-                image: "https://picsum.photos/g/200?image=115",
-                category: "ART"
-            },
-            {
-                title: "Inking",
-                image: "https://picsum.photos/g/200",
-                category: "WORKSHOPS"
+                title: "PHPtravels",
+                image: "asset/images/mock/5.jpg",
+                category: "Laravel"
             }
         ]
     }),

@@ -21,15 +21,18 @@
                 :key="xx"
                 :icon="item.icon"
                 fill-dot
-                :icon-color="item.iconColor ? item.iconColor : ''"
             >
-                <span slot="opposite">{{ item.opposite }}</span>
+                <span slot="opposite" class="play font-weight-bold">{{
+                    item.opposite
+                }}</span>
                 <v-card class="elevation-2">
-                    <v-card-title class="text-subtitle-2 text-md-h4">{{
-                        item.title
-                    }}</v-card-title>
+                    <v-card-title class="text-subtitle-2 text-md-h4">
+                        <span class="play"> {{ item.title }}</span>
+                    </v-card-title>
                     <v-card-text>
-                        {{ item.desc }}
+                        <span class="quicksand">
+                            {{ item.desc }}
+                        </span>
                     </v-card-text>
                 </v-card>
             </v-timeline-item>
@@ -45,7 +48,6 @@ export default {
         treeview: [
             {
                 icon: "mdi-laravel",
-                iconColor: "#ff2d20",
                 opposite: "Backend Dev",
                 title: "Laravel Developement",
                 desc:
@@ -53,7 +55,7 @@ export default {
             },
             {
                 icon: "mdi-monitor-dashboard",
-                iconColor: "",
+
                 opposite: "Frontend Dev",
                 title: "VueJs Developement",
                 desc:
@@ -61,7 +63,7 @@ export default {
             },
             {
                 icon: "mdi-book-open-page-variant",
-                iconColor: "red",
+
                 opposite: "SPA",
                 title: "Singe Page Application",
                 desc:
@@ -69,7 +71,6 @@ export default {
             },
             {
                 icon: "mdi-cogs",
-                iconColor: "yellow",
                 opposite: "Support",
                 title: "Fixing Problem",
                 desc:
@@ -86,5 +87,9 @@ export default {
     background-size: contain;
     background-position: bottom;
     background-attachment: fixed;
+}
+
+.quicksand {
+    font-family: "Quicksand", sans-serif !important;
 }
 </style>
