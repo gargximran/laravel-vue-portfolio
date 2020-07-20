@@ -212,13 +212,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import VueFbCustomerChat from "vue-fb-customer-chat";
-Vue.use(VueFbCustomerChat, {
-    page_id: 101533644958334,
-    theme_color: "#e91e63",
-    locale: "en_US"
-});
 export default {
     name: "Contact",
 
