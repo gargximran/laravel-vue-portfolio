@@ -17,12 +17,9 @@
                     :backSpeed="5"
                     :backDelay="1600"
                     :cursorChar="'_'"
-                    :shuffle="true"
-                    :startDelay="1200"
+                    :startDelay="2000"
+                    :loop="true"
                     @onComplete="goToNext()"
-                    @onTypingPaused="goToNext()"
-                    @onStop="goToNext()"
-                    @onReset="goToNext()"
                 >
                     <p class="text-md-h2  text-xs-h5 white--text text-center">
                         <span class="play">I am a </span>
@@ -34,7 +31,7 @@
 
                 <v-card-text style="position: relative">
                     <v-btn
-                        class="button nn mt-5"
+                        class="button mt-5"
                         to="/services"
                         absolute
                         router
@@ -80,7 +77,6 @@ export default {
     color: #fff;
     font-size: 9em;
     font-weight: normal;
-    font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 450px) {
@@ -89,12 +85,8 @@ export default {
     }
 }
 
-.nn {
-    transform: translateY(20px) !important;
-}
-
 .button {
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 20px) !important;
 }
 </style>
