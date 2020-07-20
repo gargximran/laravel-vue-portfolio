@@ -1,16 +1,22 @@
 <template
-    ><v-container class="fill-height customBackground" fluid dark>
+    ><v-container class="fill-height grey lighten-5" fluid dark>
         <v-container fluid dark>
-            <h2 class="pink--text text-center mt-3">Skills</h2>
+            <h2 class="pink--text text-center mt-3 font-weight-bold">
+                SKILLS
+            </h2>
 
             <v-row>
                 <v-col cols="12">
                     <v-btn
                         color="float-left blue--text text-capitalize"
-                        @click="$router.go(-1)"
+                        to="/services"
+                        router
                     >
                         <v-icon class="mdi-flip-h">mdi-directions</v-icon
-                        ><span>Back to service </span></v-btn
+                        ><span
+                            class="text-caption quicksand info--text font-weight-bold"
+                            >Back to service
+                        </span></v-btn
                     >
                 </v-col>
             </v-row>
@@ -26,17 +32,19 @@
                     class="m-5"
                 >
                     <v-card>
-                        <div class="text-center">
+                        <div class="text-center white">
                             <v-progress-circular
                                 size="150"
                                 class="mt-3"
                                 value="100"
                                 width="6"
                                 :color="skill.color"
-                                >{{ skill.name }}</v-progress-circular
-                            >
+                                ><span class="quicksand font-weight-bold">{{
+                                    skill.name
+                                }}</span>
+                            </v-progress-circular>
 
-                            <p class="text-body-2 pa-2 quicksand">
+                            <p class="text-body-2 pa-2 quicksand font-italic">
                                 {{ skill.desc }}
                             </p>
                         </div>
@@ -145,16 +153,4 @@ export default {
     })
 };
 </script>
-<style scoped>
-.customBackground {
-    background-image: url("/asset/images/wave.svg");
-
-    background-size: contain;
-    background-position: bottom;
-    background-attachment: fixed;
-}
-
-.quicksand {
-    font-family: "Quicksand", sans-serif !important;
-}
-</style>
+<style scoped></style>

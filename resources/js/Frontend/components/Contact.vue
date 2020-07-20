@@ -1,5 +1,5 @@
 <template>
-    <v-container class="pb-5 fill-height customBackground" fluid>
+    <v-container class="pb-5 fill-height grey lighten-5" fluid>
         <v-container class="pb-5 fill-height" dark>
             <v-row>
                 <v-col cols="12">
@@ -10,13 +10,16 @@
             <v-row align="center">
                 <v-col cols="12" md="6">
                     <h2 class="text-h4 font-weight-bold mb-2">
-                        More About me
-                        <v-icon class="blue--text">mdi-check-decagram</v-icon>
+                        <span class="play">More About me</span>
+                        <v-icon class="pink--text">mdi-check-decagram</v-icon>
                     </h2>
-                    <p class="text-body-2 my-4">
-                        I am self motivated web developer. I am very passionate
-                        about web technology. Always want to make remark of my
-                        own work. Always learning with this deep sea of tech.
+                    <p class="text-body-2 my-4 ">
+                        <span class="quicksand font-italic font-weight-bold">
+                            I am self motivated web developer. I am very
+                            passionate about web technology. Always want to make
+                            remark of my own work. Always learning with this
+                            deep sea of tech.
+                        </span>
                     </p>
 
                     <div class="my-3">
@@ -28,7 +31,7 @@
                         <div
                             class=" text-body-2 d-inline-block vertical-align-top"
                         >
-                            <span
+                            <span class="quicksand font-italic font-weight-bold"
                                 >Savar <br />
                                 Dhaka, 1341, <br />
                                 Bangladesh</span
@@ -45,7 +48,9 @@
                         <div
                             class=" text-body-2 d-inline-block vertical-align-top"
                         >
-                            <span>gargximran@gmail.com</span>
+                            <span class="quicksand font-italic font-weight-bold"
+                                >gargximran@gmail.com</span
+                            >
                         </div>
                     </div>
 
@@ -58,19 +63,23 @@
                         <div
                             class=" text-body-2 d-inline-block vertical-align-top"
                         >
-                            <span>live:gargximran_1</span>
+                            <span class="quicksand font-italic font-weight-bold"
+                                >live:gargximran_1</span
+                            >
                         </div>
                     </div>
                     <v-row no-gutters>
                         <v-col cols="12" md="4">
                             <div class="my-3 p-4">
-                                <h2 class="subtitle-2 pink--text">
-                                    Social Connect...
+                                <h2 class="text-subtitle-2 pink--text">
+                                    <span class="play font-weight-bold"
+                                        >Social Connect...</span
+                                    >
                                 </h2>
                                 <v-btn
                                     dark
                                     small
-                                    color="primary"
+                                    color="pink"
                                     target="_blank"
                                     href="https://facebook.com/gargximran"
                                     fab
@@ -80,25 +89,23 @@
 
                                 <v-btn
                                     dark
-                                    color="primary"
+                                    color="pink"
                                     target="_blank"
                                     href="https://www.linkedin.com/in/imran-hossain-b24184131/"
                                     fab
                                     small
                                 >
-                                    <v-icon class="blue darken-2 white--text"
-                                        >mdi-linkedin</v-icon
-                                    >
+                                    <v-icon class="pink">mdi-linkedin</v-icon>
                                 </v-btn>
 
                                 <v-btn
-                                    dark
+                                    color="pink"
                                     target="_blank"
                                     href="https://www.github.com/gargximran"
                                     fab
                                     small
                                 >
-                                    <v-icon>mdi-git</v-icon>
+                                    <v-icon class="white--text">mdi-git</v-icon>
                                 </v-btn>
                             </div>
                         </v-col>
@@ -106,12 +113,14 @@
                         <v-col cols="12" md="8">
                             <div class="my-3 p-4">
                                 <h2 class="subtitle-2 pink--text">
-                                    Hire me...
+                                    <span class="play font-weight-bold"
+                                        >Hire me...</span
+                                    >
                                 </h2>
                                 <v-btn
-                                    outlined
-                                    light
+                                    class="primary quicksand"
                                     text
+                                    small
                                     target="_blank"
                                     href="https://www.fiverr.com/gargximran_1"
                                 >
@@ -119,19 +128,18 @@
                                 </v-btn>
 
                                 <v-btn
-                                    outlined
-                                    class="green--text"
+                                    class="primary quicksand"
+                                    small
                                     target="_blank"
                                     href="https://www.upwork.com/o/profiles/users/~01b6d3fae516401e8b/"
-                                    text
                                 >
                                     upwork
                                 </v-btn>
 
                                 <v-btn
-                                    outlined
+                                    class="primary quicksand"
+                                    small
                                     target="_blank"
-                                    class="orange--text"
                                     href="https://www.freelancer.com/u/gargximran"
                                 >
                                     Freelancer
@@ -144,7 +152,8 @@
                 <v-divider vertical inset></v-divider>
                 <v-col cols="12" md="5">
                     <h2 class="text-h4 font-weight-bold mb-5">
-                        Drop a line for me! <v-icon>mdi-lead-pencil</v-icon>
+                        <span class="play">Direct Message!</span>
+                        ..<v-icon class="black--text">mdi-lead-pencil</v-icon>
                     </h2>
                     <v-form ref="contact">
                         <v-text-field
@@ -152,6 +161,7 @@
                             label="Name"
                             outlined
                             color="pink"
+                            class="quicksand font-italic font-weight-bold"
                             required
                             :rules="nameRules"
                             prepend-icon="mdi-account-outline"
@@ -160,8 +170,9 @@
 
                         <v-text-field
                             dense
-                            label="Email"
+                            label="Email Address"
                             color="pink"
+                            class="quicksand font-italic font-weight-bold"
                             outlined
                             required
                             :rules="emailRules"
@@ -170,6 +181,7 @@
                         ></v-text-field>
 
                         <v-textarea
+                            class="quicksand font-italic"
                             outlined
                             :rules="textRules"
                             label="Say something..."
@@ -180,6 +192,7 @@
                         <v-row no-gutters>
                             <v-col cols="12" class="pl-5 ml-3">
                                 <v-btn
+                                    class="quicksand"
                                     dark
                                     :loading="loading"
                                     color="pink"
@@ -247,13 +260,5 @@ export default {
 <style scoped>
 .vertical-align-top {
     vertical-align: text-top;
-}
-
-.customBackground {
-    background-image: url("/asset/images/wave.svg");
-
-    background-size: contain;
-    background-position: bottom;
-    background-attachment: fixed;
 }
 </style>

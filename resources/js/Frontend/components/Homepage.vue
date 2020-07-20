@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid dark class="fill-height customBackground">
+    <v-container fluid dark class="fill-height">
         <v-row align="center">
             <v-col cols="12">
                 <h1 class="heading text-center text-xs-h2 play">IMRAN</h1>
@@ -13,36 +13,41 @@
                         'web developer',
                         'full stack developer'
                     ]"
-                    :typeSpeed="50"
-                    :backSpeed="40"
-                    :backDelay="700"
+                    :typeSpeed="10"
+                    :backSpeed="5"
+                    :backDelay="1600"
                     :cursorChar="'_'"
                     :shuffle="true"
+                    :startDelay="1200"
                     @onComplete="goToNext()"
                     @onTypingPaused="goToNext()"
+                    @onStop="goToNext()"
+                    @onReset="goToNext()"
                 >
-                    <p class="text-md-h2 text-xs-h5 white--text text-center">
+                    <p class="text-md-h2  text-xs-h5 white--text text-center">
                         <span class="play">I am a </span>
-                        <span class="play pink--text typing"></span>
+                        <span class="play pink--text typing"
+                            >web developer</span
+                        >
                     </p>
                 </vue-typed-js>
+
+                <v-card-text style="position: relative">
+                    <v-btn
+                        class="button nn mt-5"
+                        to="/services"
+                        absolute
+                        router
+                        dark
+                        fab
+                        top
+                        color="pink"
+                    >
+                        <v-icon>mdi-arrow-right</v-icon>
+                    </v-btn>
+                </v-card-text>
             </v-col>
         </v-row>
-
-        <v-card-text style="position: relative">
-            <v-btn
-                class="button"
-                to="/services"
-                absolute
-                router
-                dark
-                fab
-                top
-                color="pink"
-            >
-                <v-icon>mdi-arrow-right</v-icon>
-            </v-btn>
-        </v-card-text>
     </v-container>
 </template>
 <script>
@@ -57,7 +62,7 @@ export default {
         goToNext() {
             setTimeout(() => {
                 this.$router.push({ name: "service" });
-            }, 2000);
+            }, 1500);
         }
     }
 };
@@ -66,11 +71,7 @@ export default {
 .typed-element {
     display: block;
 }
-.customBackground {
-    background-image: url("/asset/images/bg.jpg");
-    background-size: cover;
-    background-position: center;
-}
+
 .heading {
     color: #fff;
     font-size: 9em;
@@ -82,6 +83,10 @@ export default {
     .heading {
         font-size: 5em;
     }
+}
+
+.nn {
+    transform: translateY(20px) !important;
 }
 
 .button {

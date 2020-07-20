@@ -1,6 +1,8 @@
 <template>
-    <v-container fluid class="customBackground">
-        <h2 class="pink--text text-center mt-3 text-subtitle-2">
+    <v-container fluid class="grey lighten-5">
+        <h2
+            class="pink--text text-center mt-3 text-subtitle-2 quicksand font-italic text-decoration-underline"
+        >
             What they are saying about me?
         </h2>
 
@@ -11,6 +13,7 @@
                         <v-img
                             dark
                             max-width="700"
+                            lazy-src=""
                             src="asset/images/review/1.JPG"
                         ></v-img>
 
@@ -24,7 +27,11 @@
 
         <v-row>
             <v-col cols="12" align="center">
-                <v-btn class="ma-1" small v-on:click="setFilter('ALL')">
+                <v-btn
+                    class="ma-1 quicksand font-weight-bold"
+                    small
+                    v-on:click="setFilter('ALL')"
+                >
                     ALL
                 </v-btn>
                 <v-btn
@@ -32,7 +39,7 @@
                     v-for="(category, categoryIndex) in projectsCategory"
                     :key="categoryIndex"
                     @click="setFilter(category)"
-                    class="ma-1"
+                    class="ma-1 quicksand font-weight-bold"
                 >
                     {{ category }}
                 </v-btn>
@@ -54,7 +61,11 @@
                 :key="project.title"
             >
                 <v-card href="">
-                    <v-img class="white--text align-end" :src="project.image">
+                    <v-img
+                        class="white--text align-end"
+                        lazy-src="asset/images/mock/loading.gif"
+                        :src="project.image"
+                    >
                         <v-card-title>{{ project.title }}</v-card-title>
                     </v-img>
 
@@ -80,7 +91,7 @@ export default {
         projects: [
             {
                 title: "E-Business",
-                image: "asset/images/mock/1.JPG",
+                image: "asset/images/mock/1.jpg",
                 category: "Laravel"
             },
             {
@@ -88,7 +99,7 @@ export default {
                 image: "asset/images/mock/2.png",
                 category: "Vue Js"
             },
-            
+
             {
                 title: "mdProt",
                 image: "asset/images/mock/3.jpg",
@@ -152,13 +163,5 @@ export default {
 .project {
     transition: all 0.35s ease-in-out;
     border-radius: 3px;
-}
-
-.customBackground {
-    background-image: url("/asset/images/wave.svg");
-
-    background-size: contain;
-    background-position: bottom;
-    background-attachment: fixed;
 }
 </style>
