@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid dark class="fill-height">
+    <v-container fluid dark class="fill-height customBackground">
         <v-row align="center">
             <v-col cols="12">
                 <h1 class="heading text-center text-xs-h2 play">IMRAN</h1>
@@ -71,7 +71,11 @@ export default {
 .typed-element {
     display: block;
 }
-
+.customBackground {
+    background-image: url("/asset/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
 .heading {
     color: #fff;
     font-size: 9em;
