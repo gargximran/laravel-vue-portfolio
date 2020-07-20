@@ -14,11 +14,11 @@
                         'full stack developer'
                     ]"
                     :typeSpeed="10"
-                    :backSpeed="5"
+                    :backSpeed="10"
                     :backDelay="1600"
                     :cursorChar="'_'"
                     :startDelay="2000"
-                    :loop="true"
+                    :loop="false"
                     @onComplete="goToNext()"
                 >
                     <p class="text-md-h2  text-xs-h5 white--text text-center">
@@ -39,8 +39,14 @@
                         fab
                         top
                         color="pink"
+                        :loading="loading"
                     >
-                        <v-icon>mdi-arrow-right</v-icon>
+                        <template v-if="!count">
+                            <v-icon>mdi-arrow-right</v-icon>
+                        </template>
+                        <template v-else>
+                            {{ countFrom }}
+                        </template>
                     </v-btn>
                 </v-card-text>
             </v-col>
@@ -55,11 +61,28 @@ Vue.use(VueTypedJs);
 
 export default {
     name: "Homepage",
+    data: () => ({
+        countFrom: 5,
+        count: false,
+        loading: false
+    }),
     methods: {
         goToNext() {
-            setTimeout(() => {
-                this.$router.push({ name: "service" });
-            }, 1500);
+            this.count = true;
+            this.countDown();
+        },
+        countDown() {
+            if (this.countFrom == 0) {
+                this.loading = true;
+                let x = setTimeout(() => {
+                    this.$router.push({ name: "service" });
+                }, 500);
+            } else {
+                let x = setTimeout(() => {
+                    this.countFrom -= 1;
+                    this.goToNext();
+                }, 500);
+            }
         }
     }
 };

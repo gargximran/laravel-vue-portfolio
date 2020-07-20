@@ -2,17 +2,17 @@ import Vue from "vue";
 import router from "./Router";
 import store from "./Store";
 import vuetify from "./Vuetify";
-import VueFbCustomerChat from "vue-fb-customer-chat";
+// import VueFbCustomerChat from "vue-fb-customer-chat";
 
 import PerfectScrollbar from "vue2-perfect-scrollbar";
 
 Vue.use(PerfectScrollbar);
 
-Vue.use(VueFbCustomerChat, {
-    page_id: 101533644958334,
-    theme_color: "#e91e63",
-    locale: "en_US"
-});
+// Vue.use(VueFbCustomerChat, {
+//     page_id: 101533644958334,
+//     theme_color: "#e91e63",
+//     locale: "en_US"
+// });
 
 import App from "./components/App";
 
