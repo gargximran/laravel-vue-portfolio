@@ -18,13 +18,12 @@
 
         <v-divider></v-divider>
 
-        <v-timeline>
+        <v-timeline dense>
             <v-timeline-item
                 v-for="(item, xx) in treeview"
                 :key="xx"
                 :icon="item.icon"
                 fill-dot
-                :dense="true"
             >
                 <v-card class="elevation-2">
                     <v-card-title
