@@ -24,6 +24,7 @@
                 :key="xx"
                 :icon="item.icon"
                 fill-dot
+                :dense="true"
             >
                 <v-card class="elevation-2">
                     <v-card-title
